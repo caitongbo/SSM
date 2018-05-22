@@ -1,6 +1,5 @@
 package com.ssm.controller;
 
-import org.apache.ibatis.jdbc.Null;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -13,7 +12,7 @@ public class AjaxController
     @RequestMapping("/show")
     public String show()
     {
-        return "ajax";
+        return "testAjax";
     }
 
     /**
@@ -21,7 +20,7 @@ public class AjaxController
      * 如果存在 则给出提示信息
      * 如果不存在  则可以注册
      *
-     * 现在我们希望返回一个字符串  "该用户太受欢迎"/"该用户名可用"  text
+     * 现在我们希望返回一个字符串  "该用户太受欢迎"/"该用户名可用/请输入用户名！"  text
      *
      * 在ajax中响应数据可能会有中文乱码问题？ 解决途径:在@RequestMapping注解中加入 produces="text/html;charset=utf-8"
      *    采用@RequestMapping(value="/checkUsername",produces="text/html;charset=utf-8")
