@@ -19,6 +19,7 @@
 
     <!-- 4.handler 业务处理器 UserController 处理核心业务逻辑，并返回对应的视图与数据模型(ModelAndView) -->
     <context:component-scan base-package="com.ssm.controller"/>
+    <context:component-scan base-package="com.ssm.globalexceptionhandler"/>
 
 
     <!-- 5.ViewResolver 视图解析器(类名要求记住:InternalResourceViewResolver) -->
@@ -66,4 +67,18 @@
         <!-- 防止中文乱码问题 -->
         <property name="defaultEncoding" value="utf-8" />
     </bean>
+    <!-- 配置拦截器  可以配置多个拦截器 -->
+    <mvc:interceptors>
+        <mvc:interceptor>
+
+            <!-- (2)需要拦截谁 -->
+            <mvc:mapping path="/log/*" />
+
+            <!-- (3)不拦截谁  exclude 表示排除  -->
+            <mvc:exclude-mapping path="/log/find"/>
+
+            <!-- (1)拦截器是谁 -->
+            <bean class="com.ssm.interceptor.LogInterceptor"></bean>
+        </mvc:interceptor>
+    </mvc:interceptors>
 </beans>
