@@ -93,11 +93,13 @@
       <version>1.2.2</version>
     </dependency>
     <!-- mysql驱动包 -->
+    <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
     <dependency>
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
-      <version>5.1.30</version>
+      <version>8.0.11</version>
     </dependency>
+
     <!-- junit测试包 -->
     <dependency>
       <groupId>junit</groupId>

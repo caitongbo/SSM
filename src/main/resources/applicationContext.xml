@@ -93,4 +93,27 @@
             <!--<bean class="com.ssm.interceptor.CheckLoginInterceptor"></bean>-->
         <!--</mvc:interceptor>-->
     <!--</mvc:interceptors>-->
+
+    <!--
+                注入new CustomDateEditor(new SimpleDateFormat("yyyy-MM-dd"), true)
+
+                凡是new 类名();  ===> <bean class="new 对象的类全名">
+        new 类名(参数); 这个参数                ===> constructor arg标签表示
+                                                 这个参数的值         ===>  value标签表示
+       constructor-arg标签表示参数
+    -->
+    <bean id="dateEditor" class="org.springframework.beans.propertyeditors.CustomDateEditor">
+        <constructor-arg>
+            <bean class="java.text.SimpleDateFormat">
+                <constructor-arg>
+                    <value>yyyy-MM-dd</value>
+                </constructor-arg>
+            </bean>
+        </constructor-arg>
+
+        <constructor-arg>
+            <value>true</value>
+        </constructor-arg>
+    </bean>
+
 </beans>

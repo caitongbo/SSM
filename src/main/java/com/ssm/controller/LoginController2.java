@@ -44,13 +44,13 @@ public class LoginController2
             // ClassNotFoundException:
             // com.mysql.jdbc.Driver类全名写的不对
             // mysql-connector-java-5.1.24-bin.jar 没有  add build path
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
 
             // tomcat的默认端口号8080
             // mysql数据库的默认端口号3306
             // Oracle数据库的默认端1521
             // MySQL数据不支持-, utf-8 ---> utf8
-            String url = "jdbc:mysql:/127.0.0.1:3306/springmvc?useUnicode=true&characterEncoding=utf8";
+            String url = "jdbc:mysql:/127.0.0.1:3306/spring?useUnicode=true&characterEncoding=gbk&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Hongkong";
             conn = DriverManager.getConnection(url, "root", "root");
 
             String  sql = new StringBuffer()
