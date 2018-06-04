@@ -5,11 +5,12 @@
   Time: 19:58
   To change this template use File | Settings | File Templates.
 --%>
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=GB2312">
+    <meta http-equiv="Content-Type" content="text/html; charset=utfs-8">
     <title>文件下载</title>
 </head>
 <body>

@@ -68,17 +68,29 @@
         <property name="defaultEncoding" value="utf-8" />
     </bean>
     <!-- 配置拦截器  可以配置多个拦截器 -->
-    <mvc:interceptors>
-        <mvc:interceptor>
+    <!--<mvc:interceptors>-->
+        <!--<mvc:interceptor>-->
 
-            <!-- (2)需要拦截谁 -->
-            <mvc:mapping path="/log/*" />
+            <!--&lt;!&ndash; (2)需要拦截谁 &ndash;&gt;-->
+            <!--<mvc:mapping path="/log/*" />-->
 
-            <!-- (3)不拦截谁  exclude 表示排除  -->
-            <mvc:exclude-mapping path="/log/find"/>
+            <!--&lt;!&ndash; (3)不拦截谁  exclude 表示排除  &ndash;&gt;-->
+            <!--<mvc:exclude-mapping path="/log/find"/>-->
 
-            <!-- (1)拦截器是谁 -->
-            <bean class="com.ssm.interceptor.LogInterceptor"></bean>
-        </mvc:interceptor>
-    </mvc:interceptors>
+            <!--&lt;!&ndash; (1)拦截器是谁 &ndash;&gt;-->
+            <!--<bean class="com.ssm.interceptor.LogInterceptor"></bean>-->
+        <!--</mvc:interceptor>-->
+
+        <!--<mvc:interceptor>-->
+            <!--拦截所有请求-->
+            <!--<mvc:mapping path="/**" />-->
+
+            <!--不拦截登录页面-->
+            <!--<mvc:exclude-mapping path="/showUserLogin" />-->
+            <!--登录功能不拦截-->
+            <!--<mvc:exclude-mapping path="/login2" />-->
+
+            <!--<bean class="com.ssm.interceptor.CheckLoginInterceptor"></bean>-->
+        <!--</mvc:interceptor>-->
+    <!--</mvc:interceptors>-->
 </beans>

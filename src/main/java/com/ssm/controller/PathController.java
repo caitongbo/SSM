@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * Restful风格的url(企业中现在用的多)
  *    {变量名}
  *
- * @author liyan
+ *
  *
  */
 @Controller
